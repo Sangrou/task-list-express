@@ -57,7 +57,7 @@ app.put('/addOneIPoint', (request, response) => {
 
 })
 
-app.put('/substractOneIPoint', (request, response) => {
+app.put('/subOneIPoint', (request, response) => {
     db.collection('tasks').updateOne({doThis: request.body.doThis, deadline: request.body.deadline,importance: request.body.importance},{
         $set: {
             importance:request.body.importance - 1
