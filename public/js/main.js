@@ -1,16 +1,16 @@
 const deleteText = document.querySelectorAll('.fa-trash')
-const thumbUpText = document.querySelectorAll('.fa-thumbs-up')
-const thumbDownText = document.querySelectorAll('.fa-thumbs-down')
+const arrowUpText = document.querySelectorAll('.fa-arrow-up')
+const arrowDownText = document.querySelectorAll('.fa-arrow-down')
 
 Array.from(deleteText).forEach((element)=>{
     element.addEventListener('click', deleteTask)
 })
 
-Array.from(thumbUpText).forEach((element)=>{
+Array.from(arrowUpText).forEach((element)=>{
     element.addEventListener('click', addImportance)
 })
 
-Array.from(thumbDownText).forEach((element)=>{
+Array.from(arrowDownText).forEach((element)=>{
     element.addEventListener('click', subImportance)
 })
 
