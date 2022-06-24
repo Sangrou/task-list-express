@@ -5,10 +5,11 @@ body{
     background-repeat: repeat;
     box-sizing: border-box;
     width:100%;
-    margin:0%;
+    margin:20px auto auto auto;
+    
 }
 
-body h1,h2{
+body h1{
     padding: 20px 40px;
     margin: auto;
     display: block;
@@ -55,6 +56,3 @@ body > *{
     margin-bottom: 20px;
 }
 
-.fa{
-    float: right;
-}
