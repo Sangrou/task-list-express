@@ -16,15 +16,13 @@ Array.from(arrowDownText).forEach((element)=>{
 
 async function deleteTask(){
     const doThis = this.parentNode.childNodes[1].innerText
-    const deadline = this.parentNode.childNodes[3].innerText
     try{
         const response = await fetch('deleteTask', {
             method: 'delete',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
               'doThis': doThis,
-              'deadline': deadline
-            })
+              })
           })
         const data = await response.json()
         console.log(data)
@@ -37,15 +35,13 @@ async function deleteTask(){
 
 async function addImportance(){
     const doThis = this.parentNode.childNodes[1].innerText
-    const deadline = this.parentNode.childNodes[3].innerText
-    const importance = Number(this.parentNode.childNodes[5].innerText)
+    const importance = Number(this.parentNode.childNodes[3].innerText)
     try{
         const response = await fetch('addOneIPoint', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
               'doThis': doThis,
-              'deadline': deadline,
               'importance': importance
             })
           })
@@ -60,15 +56,13 @@ async function addImportance(){
 
 async function subImportance(){
     const doThis = this.parentNode.childNodes[1].innerText
-    const deadline = this.parentNode.childNodes[3].innerText
-    const importance = Number(this.parentNode.childNodes[5].innerText)
+    const importance = Number(this.parentNode.childNodes[3].innerText)
     try{
         const response = await fetch('subOneIPoint', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
               'doThis': doThis,
-              'deadline': deadline,
               'importance': importance
             })
           })

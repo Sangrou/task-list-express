@@ -1,5 +1,9 @@
 
 
+body *{
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
 body{
     background-image: url(/resource/swirl_pattern.webp);
     background-repeat: repeat;
@@ -21,10 +25,11 @@ body h1{
     -webkit-box-shadow: 4px 4px 75px 0px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 4px 4px 75px 0px rgba(34, 60, 80, 0.2);
     box-shadow: 4px 4px 75px 0px rgba(34, 60, 80, 0.2);
+    text-align: center;
 }
 
 ul{
-    padding: 20px 40px;
+    padding: 30px 40px;
     margin: auto;
     display: block;
     height: 600px;
@@ -35,6 +40,9 @@ ul{
     -webkit-box-shadow: 4px 4px 75px 0px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 4px 4px 75px 0px rgba(34, 60, 80, 0.2);
     box-shadow: 4px 4px 75px 0px rgba(34, 60, 80, 0.2);
+    font-size: 1.2em;
+    list-style-type: square;
+    text-align: right;
 }
 
 form{
@@ -49,10 +57,22 @@ form{
     -webkit-box-shadow: 4px 4px 75px 0px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 4px 4px 75px 0px rgba(34, 60, 80, 0.2);
     box-shadow: 4px 4px 75px 0px rgba(34, 60, 80, 0.2);
+    text-align: center;
 }
 
 body > *{
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
+
+h2{
+    margin-top: 0;
+}
+
+.fa-arrow-up{padding-left: 20px;}
+.importance{padding-left: 20px;}
+.taskLine{float: left;}
+
+li{overflow-wrap: break-word;}
+
 
