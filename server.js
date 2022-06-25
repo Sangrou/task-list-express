@@ -23,7 +23,7 @@ app.use(express.json())
 
 
 app.get('/',(request, response)=>{
-    db.collection('tasks').find().sort({importance: -1}).toArray()
+    db.collection('newTasks').find().sort({importance: -1}).toArray()
     .then(data => {
         response.render('index.ejs', { info: data })
     })
@@ -31,7 +31,7 @@ app.get('/',(request, response)=>{
 })
 
 app.post('/addTask', (request, response) => {
-    db.collection('tasks').insertOne({doThis: request.body.doThis,
+    db.collection('newTasks').insertOne({doThis: request.body.doThis,
     deadline: request.body.deadline, importance: 0})
     .then(result => {
         console.log('Task Added')
@@ -41,7 +41,7 @@ app.post('/addTask', (request, response) => {
 })
 
 app.put('/addOneIPoint', (request, response) => {
-    db.collection('tasks').updateOne({doThis: request.body.doThis, deadline: request.body.deadline,importance: request.body.importance},{
+    db.collection('newTasks').updateOne({doThis: request.body.doThis, deadline: request.body.deadline,importance: request.body.importance},{
         $set: {
             importance:request.body.importance + 1
           }
@@ -58,7 +58,7 @@ app.put('/addOneIPoint', (request, response) => {
 })
 
 app.put('/subOneIPoint', (request, response) => {
-    db.collection('tasks').updateOne({doThis: request.body.doThis, deadline: request.body.deadline,importance: request.body.importance},{
+    db.collection('newTasks').updateOne({doThis: request.body.doThis, deadline: request.body.deadline,importance: request.body.importance},{
         $set: {
             importance:request.body.importance - 1
           }
@@ -75,7 +75,7 @@ app.put('/subOneIPoint', (request, response) => {
 })
 
 app.delete('/deleteTask', (request, response) => {
-    db.collection('tasks').deleteOne({doThis: request.body.doThis})
+    db.collection('newTasks').deleteOne({doThis: request.body.doThis})
     .then(result => {
         console.log('Task Deleted')
         response.json('Task Deleted')
