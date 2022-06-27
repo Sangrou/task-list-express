@@ -32,7 +32,7 @@ app.get('/',(request, response)=>{
 
 app.post('/addTask', (request, response) => {
     db.collection('newTasks').insertOne({doThis: request.body.doThis,
-    deadline: request.body.deadline, importance: 0})
+    importance: 0})
     .then(result => {
         console.log('Task Added')
         response.redirect('/')
@@ -41,7 +41,7 @@ app.post('/addTask', (request, response) => {
 })
 
 app.put('/addOneIPoint', (request, response) => {
-    db.collection('newTasks').updateOne({doThis: request.body.doThis, deadline: request.body.deadline,importance: request.body.importance},{
+    db.collection('newTasks').updateOne({doThis: request.body.doThis, importance: request.body.importance},{
         $set: {
             importance:request.body.importance + 1
           }
@@ -58,7 +58,7 @@ app.put('/addOneIPoint', (request, response) => {
 })
 
 app.put('/subOneIPoint', (request, response) => {
-    db.collection('newTasks').updateOne({doThis: request.body.doThis, deadline: request.body.deadline,importance: request.body.importance},{
+    db.collection('newTasks').updateOne({doThis: request.body.doThis, importance: request.body.importance},{
         $set: {
             importance:request.body.importance - 1
           }

@@ -43,9 +43,10 @@ ul{
     -moz-box-shadow: 4px 4px 75px 0px rgba(34, 60, 80, 0.2);
     box-shadow: 4px 4px 75px 0px rgba(34, 60, 80, 0.2);
     font-size: 1.2em;
-    list-style-type: square;
+    list-style-type: square outside;
     text-align: right;
     line-height: 160%;
+
 }
 
 form{
@@ -78,7 +79,9 @@ h2{
 .importance{padding-left: 20px;}
 .taskLine{float: left; text-align: left;}
 
-li{overflow-wrap: break-word;}
+li{
+    overflow-wrap: break-word;
+}
 
 .button{margin-top: 4px;}
 
