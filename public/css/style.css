@@ -46,6 +46,7 @@ ul{
     list-style-type: square outside;
     text-align: right;
     line-height: 160%;
+    overflow: auto;
 
 }
 
